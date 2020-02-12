@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json({ limit: '10mb' }));
 app.set("port", process.env.Port || 3000);
-app.get('/hola',(req,res)=>{
+app.get('/',(req,res)=>{
     res.json('hola');
 });
 app.use('/api', sessionRoutes);
